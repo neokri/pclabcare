@@ -1,0 +1,13 @@
+mongod.exe --dbpath I:\My_projects\pclabcare\pclabcare-db
+npm init
+npm i express mongoose body-parser --save
+nodemon index.js
+
+ng new prjName
+cd prjName
+ng serve -o
+^C
+npm i bootstrap
+
+ng g c class product --type=model
+ng g s product

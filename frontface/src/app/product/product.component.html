@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5">
+            <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productService.selectedProduct._id">
+                <div class="row">
+                  <div class="input-field col s12">                    
+                    <label class="red-text">PName :</label>                   
+                    <input type="text" name="pname" #name="ngModel" [(ngModel)]="productService.selectedProduct.pname" placeholder="Enter product name" required>                    
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <label>PModel :</label>  
+                    <input type="text" name="pmodel" #name="ngModel" [(ngModel)]="productService.selectedProduct.pmodel" placeholder="Product Model">                    
+                  </div>
+                </div>                
+                <div class="row">
+                  <div class="input-field col s12">
+                    <label>Price :</label>  
+                    <input type="text" name="price" #name="ngModel" [(ngModel)]="productService.selectedProduct.price" placeholder="Price">                    
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <button class="btn btn-custom right" type="button" (click)="resetForm(productForm)">Reset</button>
+                    <button class="btn btn-custom right" type="submit" >Submit</button>
+                  </div>
+                </div>
+              </form>
+
+        </div>
+        <div class="col-lg-7"></div>
+    </div>
+
+</div>
